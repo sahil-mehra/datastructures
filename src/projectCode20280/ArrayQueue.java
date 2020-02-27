@@ -1,4 +1,4 @@
-package project20280;
+package projectCode20280;
 
 public class ArrayQueue<E> implements Queue<E> {
     public static final int CAPACITY = 1000; // default array capacity

@@ -12,8 +12,7 @@ public class LinkedBinaryTree<E extends Comparable<E>> extends AbstractBinaryTre
   } 
 
   /** Factory function to create a new node storing element e. */
-  protected Node<E> createNode(E e, Node<E> parent,
-                                  Node<E> left, Node<E> right) {
+  protected Node<E> createNode(E e, Node<E> parent, Node<E> left, Node<E> right) {
     return new Node<E>(e, parent, left, right);
   }
 

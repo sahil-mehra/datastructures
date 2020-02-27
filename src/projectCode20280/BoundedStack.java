@@ -1,4 +1,4 @@
-package project20280;
+package projectCode20280;
 
 public class BoundedStack<E> implements Stack<E> {
     public static final int CAPACITY = 20;

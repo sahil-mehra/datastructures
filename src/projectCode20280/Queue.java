@@ -1,4 +1,4 @@
-package project20280;
+package projectCode20280;
 
 public interface Queue<E> {
     /**

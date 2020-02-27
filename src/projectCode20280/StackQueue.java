@@ -4,7 +4,7 @@ using two stacks.
  This is only the pseudocode for the algorithm. Only the enqueue() and dequeue() methods are implemented.
  */
 
-package project20280;
+package projectCode20280;
 
 public class StackQueue<E>{
     Stack<E> stack1; // This holds the queue most of the time
