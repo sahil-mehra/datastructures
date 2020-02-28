@@ -23,18 +23,18 @@ package project20280;
 public class BracketChecker {
 
 
-    public void main(String[] args){
-        String[] inputs = {
-                "[]]()()", // not correct
-                "c[d]", // correct
-                "a{b[c]d}e", // correct
-                "a{b(c]d}e", // not correct, "]" doesn't match
-                "a[b{c}d]e}", // not correct, nothing matches final "}"
-                "a{b(c) ", // not correct, nothing matches opening first "{"
-                "][]][][[]][]][][[[", //
-                "(((abc))((d)))))", //
-        };
-    }
+  public void main(String[] args) {
+    String[] inputs = {
+            "[]]()()", // not correct
+            "c[d]", // correct
+            "a{b[c]d}e", // correct
+            "a{b(c]d}e", // not correct, "]" doesn't match
+            "a[b{c}d]e}", // not correct, nothing matches final "}"
+            "a{b(c) ", // not correct, nothing matches opening first "{"
+            "][]][][[]][]][][[[", //
+            "(((abc))((d)))))", //
+    };
+  }
 
 
 }

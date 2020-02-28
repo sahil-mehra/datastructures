@@ -9,48 +9,48 @@ package projectCode20280;
  */
 
 public class LinkedCircularQueue<E> implements Queue<E> {
-    CircularlyLinkedList<E> queue;
+  CircularlyLinkedList<E> queue;
 
-    public LinkedCircularQueue() {
-        this.queue = new CircularlyLinkedList<>();
-    }
+  public LinkedCircularQueue() {
+    this.queue = new CircularlyLinkedList<>();
+  }
 
-    public static void main(String[] args) {
-        // TODO Auto-generated method stub
+  public static void main(String[] args) {
+    // TODO Auto-generated method stub
 
-    }
+  }
 
-    public void rotate() {
-        this.queue.rotate();
-    }
+  public void rotate() {
+    this.queue.rotate();
+  }
 
-    @Override
-    public int size() {
-        return this.queue.size();
-    }
+  @Override
+  public int size() {
+    return this.queue.size();
+  }
 
-    @Override
-    public boolean isEmpty() {
-        return this.queue.isEmpty();
-    }
+  @Override
+  public boolean isEmpty() {
+    return this.queue.isEmpty();
+  }
 
-    @Override
-    public void enqueue(E e) {
-        this.queue.addLast(e);
-    }
+  @Override
+  public void enqueue(E e) {
+    this.queue.addLast(e);
+  }
 
-    @Override
-    public E first() {
-        return this.queue.get(0);
-    }
+  @Override
+  public E first() {
+    return this.queue.get(0);
+  }
 
-    @Override
-    public E dequeue() {
-        return this.queue.removeFirst();
-    }
+  @Override
+  public E dequeue() {
+    return this.queue.removeFirst();
+  }
 
-    public String toString() {
-        return this.queue.toString();
-    }
+  public String toString() {
+    return this.queue.toString();
+  }
 
 }
