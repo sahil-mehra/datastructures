@@ -17,11 +17,9 @@
  * 5. "(((abc))((d)))))"
  */
 
-
-package project20280;
+package projectCode20280;
 
 public class BracketChecker {
-
 
   public void main(String[] args) {
     String[] inputs = {

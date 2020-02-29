@@ -23,7 +23,7 @@ public class LinkedBinaryTree<E extends Comparable<E>> extends AbstractBinaryTre
   }      // constructs an empty binary tree
 
   public static void main(String[] args) {
-    LinkedBinaryTree<Integer> bt = new LinkedBinaryTree<Integer>();
+    LinkedBinaryTree<Integer> bt = new LinkedBinaryTree<>();
 
     int[] arr = {12, 25, 31, 58, 36, 42, 90, 62, 75};
     for(int i : arr) {

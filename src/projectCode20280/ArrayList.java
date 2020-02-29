@@ -51,8 +51,8 @@ public class ArrayList<E> implements List<E> {
   /**
    * Returns (but does not remove) the element at index i.
    *
-   * @param i
-   * @return
+   * @param i TODO
+   * @return TODO
    */
   @Override
   public E get(int i) throws IndexOutOfBoundsException {
@@ -61,8 +61,8 @@ public class ArrayList<E> implements List<E> {
   }
 
   /**
-   * @param i
-   * @param e
+   * @param i TODO
+   * @param e TODO
    * @throws IllegalStateException
    */
   @Override
@@ -77,7 +77,7 @@ public class ArrayList<E> implements List<E> {
   }
 
   /**
-   * @param e
+   * @param e TODO
    */
   @Override
   public void addFirst(E e) {
@@ -85,7 +85,7 @@ public class ArrayList<E> implements List<E> {
   }
 
   /**
-   * @param e
+   * @param e TODO
    */
   @Override
   public void addLast(E e) {
@@ -93,9 +93,9 @@ public class ArrayList<E> implements List<E> {
   }
 
   /**
-   * @param i
-   * @return
-   * @throws IllegalStateException
+   * @param i TODO
+   * @return TODO
+   * @throws IllegalStateException TODO
    */
   @Override
   public E remove(int i) throws IllegalStateException {
@@ -110,7 +110,7 @@ public class ArrayList<E> implements List<E> {
   }
 
   /**
-   * @return
+   * @return TODO
    */
   @Override
   public E removeFirst() {
@@ -118,7 +118,7 @@ public class ArrayList<E> implements List<E> {
   }
 
   /**
-   * @return
+   * @return TODO
    */
   @Override
   public E removeLast() {
@@ -127,15 +127,15 @@ public class ArrayList<E> implements List<E> {
 
   @Override
   public Iterator<E> iterator() {
-    return null;
+    return new ArrayListIterator();
   }
 
   // Utility Methods
 
   /**
-   * @param i
-   * @param n
-   * @throws IndexOutOfBoundsException
+   * @param i TODO
+   * @param n TODO
+   * @throws IndexOutOfBoundsException TODO
    */
   protected void checkIndex(int i, int n) throws IndexOutOfBoundsException {
     if(i < 0 || i > n) {
@@ -145,10 +145,22 @@ public class ArrayList<E> implements List<E> {
 
   protected void resize(int capacity) {
     E[] temp = (E[]) new Object[capacity]; // Safe cast, compiler may give warning
-    for(int i = 0; i < size; i++) {
-      temp[i] = data[i];
-    }
+    if(size >= 0) System.arraycopy(data, 0, temp, 0, size);
     data = temp;
   }
+
+  private class ArrayListIterator implements Iterator<E> {
+
+    @Override
+    public boolean hasNext() {
+      return false;
+    }
+
+    @Override
+    public E next() {
+      return null;
+    }
+  }
+
 }
 

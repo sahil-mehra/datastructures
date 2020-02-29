@@ -6,7 +6,8 @@ public class LinkedDeque<E> implements Deque<E> {
 
 
   public static void main(String[] args) {
-    LinkedDeque<Integer> test = new LinkedDeque();
+    LinkedDeque<Integer> test;
+    test = new LinkedDeque<>();
     test.addFirst(1);
   }
 
