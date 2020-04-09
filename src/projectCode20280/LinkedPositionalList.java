@@ -6,12 +6,19 @@ public class LinkedPositionalList<E> implements PositionalList<E> {
   private Node<E> header; // header sentinel
   private Node<E> trailer; // trailer sentinel
   private int size = 0; // number of elements in the list
+
   // Constructs a new empty list
   public LinkedPositionalList() {
     header = new Node<>(null, null, null); // create header
     trailer = new Node<>(null, header, null); // trailer is preceded by header
     header.setNext(trailer); // header is followed by trailer
   }
+
+  public static void main(String[] args) {
+    // TODO
+  }
+
+  // Private Utilities
 
   /**
    * Validates the position and returns it as a node.
@@ -31,8 +38,6 @@ public class LinkedPositionalList<E> implements PositionalList<E> {
     return node;
   }
 
-  // Private Utilities
-
   /**
    * Returns the given node as a Position ( or null if it is a sentinel).
    *
@@ -46,6 +51,8 @@ public class LinkedPositionalList<E> implements PositionalList<E> {
     return node;
   }
 
+  // Public accessor methods
+
   /**
    * @return The number of elements in the list.
    */
@@ -53,8 +60,6 @@ public class LinkedPositionalList<E> implements PositionalList<E> {
   public int size() {
     return size;
   }
-
-  // Public accessor methods
 
   /**
    * Test if the list is empty.
@@ -112,6 +117,8 @@ public class LinkedPositionalList<E> implements PositionalList<E> {
     return position(node.getNext());
   }
 
+  // Private utilities
+
   /**
    * Adds element e to the linked list between the given nodes
    *
@@ -128,7 +135,8 @@ public class LinkedPositionalList<E> implements PositionalList<E> {
     return newest;
   }
 
-  // Private utilities
+
+  // Public update methods
 
   /**
    * Inserts element e at the front of the linked list and returns its new Position.
@@ -140,9 +148,6 @@ public class LinkedPositionalList<E> implements PositionalList<E> {
   public Position<E> addFirst(E e) {
     return addBetween(e, header, header.getNext());
   }
-
-
-  // Public update methods
 
   /**
    * Inserts element e at the back of the linked list and returns its new Position.
@@ -259,5 +264,6 @@ public class LinkedPositionalList<E> implements PositionalList<E> {
       this.next = next;
     }
   } // End of nested class
+
 
 }

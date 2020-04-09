@@ -8,14 +8,14 @@ public class ArrayList<E> implements List<E> {
   private int size = 0; // Current number of elements
   private E[] data; // Generic array used for storage
 
-  // Constructors
-
   /**
    * Constructs ArrayList with default capacity.
    */
   public ArrayList() {
     this(CAPACITY);
   }
+
+  // Constructors
 
   /**
    * Constructs ArrayList with a user given capacity.
@@ -24,6 +24,19 @@ public class ArrayList<E> implements List<E> {
    */
   public ArrayList(int capacity) {
     data = (E[]) new Object[capacity]; // Safe cast. Compiler may give warning
+  }
+
+  /**
+   * Replaces the element at the specified position in this list with the specified element.
+   * @param index The Position in the list
+   * @param newVal The new Element
+   * @return The old Element
+   */
+  public E set(int index, E newVal) {
+    if(index < 0 || index >= size()) throw new ArrayIndexOutOfBoundsException();
+    E old = data[index];
+    data[index] = newVal;
+    return old;
   }
 
   // Public Methods

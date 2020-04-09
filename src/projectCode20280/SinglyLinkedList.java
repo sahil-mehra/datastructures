@@ -94,7 +94,7 @@ public class SinglyLinkedList<E> implements List<E> {
     Objects.requireNonNull(ptr).next = null;
   }
 
-  // TODO
+  // TODO recursiveCopy()
   public SinglyLinkedList<E> recursiveCopy() {
     SinglyLinkedList<E> temp = new SinglyLinkedList<>();
 

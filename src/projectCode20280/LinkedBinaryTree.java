@@ -16,6 +16,7 @@ public class LinkedBinaryTree<E extends Comparable<E>> extends AbstractBinaryTre
   private int size = 0;              // number of nodes in the tree
 
   // LinkedBinaryTree instance variables
+
   /**
    * Constructs an empty binary tree.
    */
