@@ -41,7 +41,7 @@ public class HeapPriorityQueue<K, V> extends AbstractPriorityQueue<K, V> {
   public HeapPriorityQueue(K[] keys, V[] values) {
     super();
     for(int j = 0; j < Math.min(keys.length, values.length); j++) {
-      heap.addLast(new PQEntry<K, V>(keys[j], values[j]));
+      heap.addLast(new PQEntry<>(keys[j], values[j]));
       heapify();
     }
   }
